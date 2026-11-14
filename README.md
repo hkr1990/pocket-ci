@@ -6,6 +6,10 @@ Pocket CI is a dummy version of the build submission, status tracking, and live-
 
 **Project status:** design stage. The repository currently contains a Rust starter, not an implemented CI service. The capabilities and CLI examples below describe the target implementation.
 
+## Six-Hour Learning Guide
+
+Read [Pocket CI: HTTP, Streaming, and gRPC in Six Hours](BOOK.md), a textbook organized into 24 lessons with a six-hour core route. It covers HTTP/1.1 versus HTTP/2, unary versus streaming interactions, incremental HTTP logs, and HTTP-to-gRPC stream translation. Each lesson includes a learning goal and an exercise; worked examples, guided labs, an answer key, a glossary, and troubleshooting support the explanations. Runnable Python/curl exercises are distinguished from Rust implementation workshops and the planned, not-yet-implemented CLI.
+
 ## The Product
 
 Each build simulates three stages: checkout, compile, and test. Tokio tasks produce timed logs and finish with either success or an intentional test failure. The simulation makes network behavior observable without needing containers or a compiler toolchain inside the server.
